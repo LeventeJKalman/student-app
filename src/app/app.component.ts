@@ -8,6 +8,7 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit {
   myStudent:any[]=[];
+  mySchool:any;
 
   constructor(private service:DataService){
 
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
     this.service.GetStudentData().subscribe(
       (data)=>{
       this.myStudent = data.students;
+      this.mySchool = data.School;
       }
     );
   }

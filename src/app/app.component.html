@@ -1,7 +1,11 @@
-<h3>Student App</h3>
+<h2>Student App</h2>
+<h3 *ngFor="let x of mySchool">School: {{x.School}}</h3>
 
-<ul>
+<ol>
   <li *ngFor="let student of myStudent">
-    {{student[0].name}}, {{student[0].age}}, {{student[0].id}}, {{student[0].course}}
+    <h5>Name: {{student.name}}</h5>
+    <h5>Age: {{student.age}}</h5> 
+    <h5>ID: {{student.id}}</h5> 
+    <h5>Course: {{student.course}}</h5>
   </li>
-</ul>
+</ol>
